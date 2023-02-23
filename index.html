@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ae9f7c79c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- ---------- hrader section starts hear ---------- -->
+    <header class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <a href="#"><img src="/img/logo.png" alt="header logo"></a>
+                </div>
+                <div class="nav-icone cancle-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="nav-icone menu-btn">  
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+                <div class="meny-overlay"></div>
+                <!-- ------ navigation start ----- -->
+                <nav class="nav-menu">
+                    <ul class="menu">
+                        <li class="menu-items menu-items-has-childern">
+                            <a href="#" data-toggle="sub-menu">Home <i class="fa-solid fa-angle-down menu-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="#">Home 1</a></li>
+                                <li class="menu-item"><a href="#">Home 2</a></li>
+                                <li class="menu-item"><a href="#">Home 3</a></li>
+                                <li class="menu-item"><a href="#">Home 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-items">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="menu-items">
+                            <a href="#">Services</a>
+                        </li>
+                        <li class="menu-items menu-items-has-childern">
+                            <a href="#" data-toggle="sub-menu">Pages <i class="fa fa-thin fa-angle-down menu-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="#">Pages 1</a></li>
+                                <li class="menu-item"><a href="#">Pages 2</a></li>
+                                <li class="menu-item"><a href="#">Pages 3</a></li>
+                                <li class="menu-item"><a href="#">Pages 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-items">
+                            <a href="#">News</a>
+                        </li>
+                        <li class="menu-items">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- ------ navigation ends ----- -->
+            </div> 
+        </div>
+    </header>
+    <!-- ---------- header section ends hear ---------- -->
+
+    <!-- ---------- hone section starts hear ---------- -->
+    <section class="home-section">
+        <div class="container">
+            <div class="home-content">
+                <h1>Welcome</h1>
+            </div>
+        </div>
+    </section>
+    <!-- ---------- home section ends hear ---------- --> 
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+/* -- google fonts -- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ----- reset code and common code ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+body.hidden-scrolling {
+    overflow-y: hidden;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* ----- header section srats hear ----- */
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    padding: 10px 0;
+    transition: all 0.3s;
+}
+
+.header .container {
+    border-bottom: 1px solid #dddddd75;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+
+
+.header .logo a {
+    font-size: 25px;
+    text-transform: capitalize;
+    color: #ff523b;
+    font-weight: 600;
+}
+
+.logo {
+    width: 130px;
+}
+
+.header .menu .menu-items {
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.header .menu .menu-items a {
+    display: block;
+    padding: 12px 0;
+    font-size: 16px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.header .menu .menu-items a i {
+    pointer-events: none;
+    font-size: 12px;
+}
+
+.header .menu .menu-items .sub-menu .menu-item a:hover,
+.header .menu .menu-items:hover a {
+    color: #ff523b;
+}
+
+.header .menu .menu-items .sub-menu {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 220px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    border-top: 3px solid #ff523b;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media (min-width:992px) {
+    .header .menu .menu-items-has-childern:hover .sub-menu {
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.header .menu .menu-items .sub-menu .menu-item {
+    display: block;
+}
+
+.header .menu .menu-items .sub-menu .menu-item a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+.header .menu .menu-items:hover .menu-angle-down {
+    transform: rotate(180deg);
+}
+
+.nav-icone,
+.nav-icone.cancle-btn {
+    font-size: 21px;
+    margin-right: 15px;
+    display: none;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.header .meny-overlay {
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.header .meny-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.header.sticky {
+    color: #fff;
+    background: #000000;
+    padding: 5px 0;
+}
+
+/* ----- header sectin ends hear ----- */
+
+/* ----- home section starts hear ----- */
+.home-section {
+    width: 100%;
+    display: block;
+    min-height: 100vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.4)), to(rgba(17, 17, 17, 0.4))), url(img/banner.jpg) no-repeat;
+    background: linear-gradient(rgba(17, 17, 17, 0.2), rgab(17, 17, 17, 0.7)), url(img/banner.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-content h1 {
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+}
+
+/* ----- home section ends hear ----- */
+
+
+/* ========== responsive ========== */
+@media (max-width:991px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 1300px;
+    }
+
+    .header .nav-menu {
+        position: absolute;
+        top: 63px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        z-index: 1000;
+        max-height: 0;
+        visibility: hidden;
+        transition: all 0.5s ease;
+    }
+
+    .header .nav-menu.open {
+        visibility: visible;
+        max-height: 100vh;
+    }
+
+    .nav-icone,
+    .nav-icone.cancle-btn.show {
+        display: block;
+    }
+
+    .nav-icone.hide {
+        display: none;
+    }
+
+    .header .menu .menu-items {
+        display: block;
+        margin-left: 0;
+    }
+
+    .header .menu .menu-items-has-childern a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header .menu .menu-items a {
+        color: #fff;
+        border-bottom: 1px solid #dddddd2e;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .header .menu .menu-items:last-child a {
+        border-bottom: none;
+    }
+
+    .header .menu .menu-items .sub-menu {
+        width: 100%;
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+        transform: translateY(0px);
+        padding: 0;
+        left: auto;
+        top: auto;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .header .menu .menu-items .sub-menu .menu-item a {
+        padding: 12px 45px;
+        color: #fff;
+        border-bottom: 1px solid #dddddd2e;
+    }
+
+    .open-nav-menu i {
+        display: flex;
+    }
+}
